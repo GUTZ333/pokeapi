@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon - {{title}} || PokeAPI</title>
+    <link rel="stylesheet" href="../static/css/search.css">
+</head>
+<body>
+    <div class="background">
+
+    </div>
+    <a href="/" id="back-home">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: auto; height: 1em; vertical-align: middle; display: inline-block; line-height: 0; font-size: 24px; transform: none;">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4871 3.95288L16.513 5.04719L9.09603 12L16.513 18.9529L15.4871 20.0472L6.90344 12L15.4871 3.95288Z" fill="var(--shein-common-header-icon-color, #000)">
+                
+            </path>
+        </svg>
+    </a>
+    <div id="poke-message">
+        <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="pokeapi">
+        <h2 id="message">Aqui estão os resultados sobre o pokemon {{nome}}</h2>
+    </div>
+    <main>
+        <div id="img-poke">
+            <img src="{{img}}" width="200" alt="">
+        </div>
+        <h2 id="name-poke" style="color: #E2C270;">{{nome}}</h2>
+        <p class="items" id="base-experience">Base de Experiência: {{base_experience}} pontos</p>
+        <p class="items" id="height">Altura: {{altura}}dm</p>
+        <p class="items" id="weight">Peso: {{peso}}hg</p>
+        <p class="items" id="order">Ordem Oficial: {{ordem_oficial}}</p>
+        <a id="anchor-abilites" href="{{url_habilidades}}">url das habilidades</a>
+    </main>
+</body>
+</html>

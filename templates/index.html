@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/imgs/icons/poke-api.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>Poke Api</title>
+</head>
+<body>
+    <div class="background">
+
+    </div>
+    <main>
+        <img src="../static/imgs/pokeapi_256.png" width="200" alt="pokeapi">
+        <form action="/search" method="get">
+            <label for="input-name-pokemom">Nome do Pokedex</label>
+            <input type="text" id="input-name-pokemom" name="name-pokemom" placeholder="Digite um nome de um pokedex..." required>
+            <p id="poke-not-found">
+                {% with messages = get_flashed_messages(category_filter=["not-found"]) %}
+                    {% if messages %}
+                        {{ messages[0] }}
+                    {% endif %}
+                {% endwith %}</p>
+            <button type="submit">encontrar pokedexs</button>
+        </form>
+    </main>
+</body>
+</html>
